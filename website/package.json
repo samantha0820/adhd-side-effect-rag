@@ -1,0 +1,29 @@
+{
+  "name": "adhd-medication-evidence-explorer",
+  "version": "1.0.0",
+  "description": "An interactive ADHD medication side-effect evidence explorer",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "next": "^16.2.11",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "22.20.1",
+    "@types/react": "19.2.17",
+    "@types/react-dom": "~19.2.3",
+    "typescript": "^5.9.3"
+  },
+  "pnpm": {
+    "overrides": {
+      "postcss": ">=8.5.10",
+      "sharp": ">=0.35.0"
+    }
+  }
+}

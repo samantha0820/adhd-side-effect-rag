@@ -1,0 +1,41 @@
+[project]
+name = "side_effect"
+version = "0.1.0"
+description = "analyze side effect data"
+authors = [{name = "Xinzhou Li"}]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.9,<4.0"
+dynamic = ["dependencies"]
+
+[project.scripts]
+build-rag-index = "src.side_effect.rag.cli:main"
+
+[tool.poetry]
+packages = [{include = "side_effect", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pymedtermino = "^0.3.3"
+torch = "^2.5.1"
+transformers = "^4.47.0"
+scikit-learn = "^1.5.2"
+matplotlib = "^3.9.3"
+nltk = "^3.9.1"
+pandas = "^2.2.3"
+faiss-cpu = "^1.8.0"
+fastapi = "^0.115.0"
+uvicorn = {version = "^0.34.0", extras = ["standard"]}
+google-genai = ">=1.0,<2.0"
+typing-extensions = ">=4.15,<5.0"
+pydantic = "^2.10.0"
+
+[tool.poetry.group.dev.dependencies]
+myst-nb = {version = "^1.1.2", python = "^3.9"}
+sphinx-autoapi = "^3.4.0"
+sphinx-rtd-theme = "^3.0.2"
+pytest = "^8.3.4"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
